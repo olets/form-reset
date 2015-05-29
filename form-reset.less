@@ -1,0 +1,62 @@
+.form-text {
+    font-family: @body-font-family;
+    color: @body-color;
+    font-size: @body-font-size;
+}
+.form-input {
+    font-family: @body-font-family;
+    color: red;
+    font-size: @body-font-size;
+}
+.form-placeholder {
+    font-family: @body-font-family;
+    color: lighten(@body-color, 20%);
+    font-size: @body-font-size;
+}
+
+
+/*
+ *
+ */
+
+
+input, input[type="submit"], select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-repeat: repeat;
+    .border-radius(0);
+    .form-text;
+    &:focus {
+        .box-shadow(none);
+        outline: none;
+    }
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+textarea {
+    resize: vertical;
+}
+textarea, input {
+    &[type="text"], &[type="email"] {
+        .form-input;
+    }
+}
+form {
+    input, textarea, select {
+        &::-webkit-input-placeholder {
+			.form-placeholder;
+        }
+        &:-moz-placeholder {
+			.form-placeholder;
+        }
+        &::-moz-placeholder {
+			.form-placeholder;
+        }
+        &:-ms-input-placeholder {
+			.form-placeholder;
+        }
+	}
+}
