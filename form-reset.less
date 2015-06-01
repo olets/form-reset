@@ -13,6 +13,7 @@
     font-family: @body-font-family;
     color: lighten(@body-color, 20%);
     font-size: @body-font-size;
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -25,6 +26,7 @@ input, input[type="submit"], select {
     border-repeat: repeat;
     .border-radius(0);
     .form-text;
+    -webkit-font-smoothing: subpixel-antialiased;
     &:focus {
         .box-shadow(none);
         outline: none;
